@@ -1,0 +1,33 @@
+<div class="example-table-container">
+    <h1>
+        A widget to display a table of the most recent 50 incidents from the Atlassian Bitbucket Status API.
+    </h1>
+
+    <table mat-table [dataSource]="dataSource"
+           matSort matSortActive="created_at" matSortDirection="desc">
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Service</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+
+      <!-- State Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+        <td mat-cell *matCellDef="let row">{{row.status}}</td>
+      </ng-container>
+
+      <!-- Created Column -->
+      <ng-container matColumnDef="created_at">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Created
+        </th>
+        <td mat-cell *matCellDef="let row">{{row.created_at | date}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>

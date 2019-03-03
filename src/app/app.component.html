@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span>Bitbucket Status Widgets</span>
+    <span class="spacer"></span>
+    <div>
+        <button mat-button [routerLink]="['/']" >Home</button>
+        <button mat-button [routerLink]="['/incidents']">Incidents table</button>
+    </div>
+</mat-toolbar>
+
+<div class="container mt-20">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

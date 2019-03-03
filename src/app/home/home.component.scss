@@ -1,0 +1,12 @@
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+mat-grid-tile {
+  background: lightblue;
+
+  .status-name {
+    font-weight: bold;
+    margin-right: 1%;
+  }
+}

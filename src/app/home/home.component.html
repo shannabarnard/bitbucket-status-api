@@ -1,0 +1,40 @@
+<h1>Angular app to display up-to-date status information of the Bitbucket service API.</h1>
+
+<div class="mb-30">
+  <p>a. A widget to display the overall status</p>
+
+  <div class="alert alert-primary" role="alert">
+    {{ status?.status.description }}
+  </div>
+</div>
+
+<mat-grid-list class="mb-30" cols="2" rowHeight="2:1">
+  <p>b. A widget to display the status of the following services:</p>
+  <mat-grid-tile>
+    <div class="status-name">i. {{ component?.components[0].name }}:</div>
+    <div>{{ component?.components[0].status }}</div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="status-name">ii. {{ component?.components[2].name }}:</div>
+    <div>{{ component?.components[2].status }}</div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="status-name">iii. {{ component?.components[4].name }}:</div>
+    <div>{{ component?.components[4].status }}</div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="status-name">iv. {{ component?.components[11].name }}:</div>
+    <div>{{ component?.components[11].status }}</div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="mb-30">
+  <p>c. A widget to display the number of current incidents: <span class="badge badge-pill badge-danger"> {{ incidents?.incidents.length }}</span></p>
+</div>
+
+<div class="mb-30">
+  <p>d. A widget to display a table of the most recent 50 incidents:</p>
+  <button type="button" class="btn btn-primary" [routerLink]="['/incidents']">
+    Incidents table
+  </button>
+</div>
