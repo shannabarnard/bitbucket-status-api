@@ -2,6 +2,13 @@
 
 Project is hosted on [Firebase](https://bitbucket-status-application.firebaseapp.com/)
 
+## Requirements
+[NodeJS](https://nodejs.org/en/)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+`npm install -g @angular/cli`
+
+
 ## Install
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
