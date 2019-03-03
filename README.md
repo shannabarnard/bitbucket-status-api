@@ -6,6 +6,7 @@ Project is hosted on [Firebase](https://bitbucket-status-application.firebaseapp
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
 `git clone https://github.com/shannabarnard/bitbucket-status-api.git`
+
 `npm install`
 
 ## Development server
